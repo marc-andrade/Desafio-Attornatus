@@ -52,6 +52,7 @@ public class EnderecoService {
         return listDto;
     }
 
+
     private void copyDtoToEntity(EnderecoDTO dto, Endereco entity) {
         entity.setLogradouro(dto.getLogradouro());
         entity.setCep(dto.getCep());

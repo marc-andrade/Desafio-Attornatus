@@ -17,17 +17,14 @@ public class Pessoa {
 
     private String nome;
     private LocalDate dataDeNascimento;
-    @OneToMany(mappedBy = "pessoa")
-    private List<Endereco> enderecos;
 
     public Pessoa() {
     }
 
-    public Pessoa(Long id, String nome, LocalDate dataDeNascimento, List<Endereco> enderecos) {
+    public Pessoa(Long id, String nome, LocalDate dataDeNascimento) {
         this.id = id;
         this.nome = nome;
         this.dataDeNascimento = dataDeNascimento;
-        this.enderecos = enderecos;
     }
 
     public Long getId() {
@@ -52,14 +49,6 @@ public class Pessoa {
 
     public void setDataDeNascimento(LocalDate dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
-    }
-
-    public List<Endereco> getEnderecos() {
-        return enderecos;
-    }
-
-    public void setEnderecos(List<Endereco> enderecos) {
-        this.enderecos = enderecos;
     }
 
     @Override
